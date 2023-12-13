@@ -18,7 +18,7 @@ use crate::util::{adc, mac, sbb};
 // The internal representation of this type is four 64-bit unsigned
 // integers in little-endian order. `Scalar` values are always in
 // Montgomery form; i.e., Scalar(a) = aR mod q, with R = 2^256.
-#[derive(Clone, Copy, Eq, PartialOrd, Ord)]
+#[derive(Clone, Copy, Eq, PartialOrd, Ord, Hash)]
 pub struct Scalar(pub(crate) [u64; 4]);
 
 impl fmt::Debug for Scalar {

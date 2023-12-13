@@ -49,8 +49,10 @@ pub use fp::Fp;
 pub use fp12::Fp12;
 pub use fp2::Fp2;
 pub use fp6::Fp6;
-pub use scalar::Scalar;
+pub use scalar::*;
+pub use fr::*;
 
+mod fr;
 #[cfg(feature = "groups")]
 mod fp;
 #[cfg(feature = "groups")]
